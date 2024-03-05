@@ -1,4 +1,5 @@
 export default function getResponseFromAPI() {
-  // eslint-disable-line
-  return new Promise((resolve, reject) => {});
+	return new Promise((resolve) => {
+		resolve('Resolved');
+	});
 }
