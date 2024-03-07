@@ -31,17 +31,13 @@ export default class HolbertonCourse {
 
   // Getter and setter for 'students' attribute
   get students() {
-    return [...this._students];
+    return this._students;
   }
 
   set students(value) {
     if (!Array.isArray(value)) {
-      throw new TypeError('Students must be an array');
+      throw new TypeError('must be an array');
     }
-    // Check if all elements in the array are strings
-    if (!value.every((item) => typeof item === 'string')) {
-      throw new TypeError('All students must be strings');
-    }
-    this._students = [...value];
+    this._students = value;
   }
 }
