@@ -27,4 +27,11 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
-
+  },
+  overrides:[
+    {
+      files: ['*.js'],
+      excludedFiles: 'babel.config.js',
+    }
+  ]
+};
