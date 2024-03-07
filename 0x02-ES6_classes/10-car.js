@@ -5,13 +5,31 @@ export default class Car {
     this._color = color;
   }
 
+  get brand() {
+    return this._brand;
+  }
+
+  set brand(value) {
+    this._brand = value;
+  }
+
+  get motor() {
+    return this._motor;
+  }
+
+  set motor(value) {
+    this._motor = value;
+  }
+
+  get color() {
+    return this._color;
+  }
+
+  set color(value) {
+    this._color = value;
+  }
+
   cloneCar() {
-    const clonedCar = new Car();
-    Object.getOwnPropertyNames(this).forEach((prop) => {
-      if (prop !== 'cloneCar') {
-        clonedCar[prop] = this[prop];
-      }
-    });
-    return clonedCar;
+    return new this.constructor(this.brand, this.motor, this.color);
   }
 }
